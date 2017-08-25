@@ -1,0 +1,23 @@
+﻿@model List<Fiap.Exemplo03.MVC.Models.Animal>
+
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+
+<table class="table">
+    <tr>
+        <th>Nome</th>
+        <th>Data de Nascimento</th>
+        <th>Espécie</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Nome</td>
+            <td>@item.DataNascimento.ToShortDateString()</td>
+            <td>@item.Especie</td>
+        </tr>
+    }
+</table>
